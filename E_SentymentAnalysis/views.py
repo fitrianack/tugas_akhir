@@ -3,8 +3,4 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'index.html')
-
-
-def about(request):
-    return HttpResponse("hallo ini about")
+    return render(request, 'umum/index.html', {})

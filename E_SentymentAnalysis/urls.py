@@ -6,9 +6,9 @@ from . import views
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
+    path('landing_page/', include('landing_page.urls')),
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),  # new
     # url account
     path('accounts/', include('django.contrib.auth.urls')),
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
 ]

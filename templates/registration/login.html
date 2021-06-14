@@ -5,7 +5,7 @@
   
 <head>
     <meta charset="utf-8">
-    <title>Login</title>
+    <title>Login E-Sentyment Analysis Jabar</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes"> 
@@ -73,14 +73,22 @@
 		
 		<form method="post">
 		{% csrf_token %}
+		{{ form.non_field_errors }}
 		<div class="login-fields">
 			<center><i class="fa fa-user" style="font-size:48px;"></i></center>
 			<h2 style="text-align: center;">LOGIN ADMINISTRATOR</h2>
 			<br>
 			<br>
 			<div class="field">
-			{{ form.as_p }}
+				<label for="{{ form.username.id_for_label }}"> Username</label>
+				{{ form.username }}
+				{{ form.username.errors }}
 			</div> <!-- /field -->
+			<div class="field">
+				<label for="{{ form.password.id_for_label }}"> Password</label>
+				{{ form.password }}
+				{{ form.password.errors }}
+			</div>
 		</div> <!-- /login-fields -->
 			<div class="login-actions">				
 				<button type= "submit" class="button btn btn-warning btn-large">Masuk</button>

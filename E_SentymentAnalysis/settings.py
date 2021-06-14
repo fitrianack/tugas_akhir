@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # nama app yang telah kita buat sebelumnya
     'crispy_forms',
     'accounts',
+    'landing_page',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
